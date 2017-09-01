@@ -1,0 +1,16 @@
+#!/usr/bin/with-contenv bash
+
+# make folders
+mkdir -p \
+	/usr/share/urbackup
+
+# permissions
+chown urbackup:urbackup \
+	/usr/share/urbackup \
+	/usr/local/var/urbackup \
+	/usr/local/share/urbackup \
+	/usr/local/share/urbackup/urbackup_ecdsa409k1.pub
+
+chown -R urbackup:urbackup \
+	/usr/local/share/urbackup/www \
+	/etc/urbackup

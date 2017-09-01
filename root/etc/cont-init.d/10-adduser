@@ -1,0 +1,30 @@
+#!/usr/bin/with-contenv bash
+
+PUID=${PUID:-911}
+PGID=${PGID:-911}
+
+groupmod -o -g "$PGID" urbackup
+usermod -o -u "$PUID" urbackup
+
+echo "
+-------------------------------------
+          _     _ _
+         | |___| (_) ___
+         | / __| | |/ _ \ 
+         | \__ \ | | (_) |
+         |_|___/ |_|\___/
+               |_|
+
+Brought to you by linuxserver.io
+We gratefully accept donations at:
+https://www.linuxserver.io/donations/
+-------------------------------------
+GID/UID
+-------------------------------------
+User uid:    $(id -u urbackup)
+User gid:    $(id -g urbackup)
+-------------------------------------
+"
+chown urbackup:urbackup /app
+chown urbackup:urbackup /config
+chown urbackup:urbackup /defaults
