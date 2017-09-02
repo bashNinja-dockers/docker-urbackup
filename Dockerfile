@@ -17,6 +17,7 @@ SOURCE_URL="https://hndl.urbackup.org/Server/2.1.19/urbackup-server-2.1.19.tar.g
 RUN curl ${SOURCE_URL} | \
  tar -xzC /tmp/ && \
  cd /tmp/urbackup* && \
+ sed -i -e 's/C\:\\\\urbackup/\/config\//g' urbackupserver/server_settings.cpp && \
  ./configure --with-mountvhd && \
  make && \
  make install
