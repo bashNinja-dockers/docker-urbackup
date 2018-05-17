@@ -8,7 +8,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 
 # global environment settings
 ENV DEBIAN_FRONTEND="noninteractive" \
-SOURCE_URL="https://hndl.urbackup.org/Server/2.1.19/urbackup-server-2.1.19.tar.gz"
+SOURCE_URL="https://hndl.urbackup.org/Server/2.2.11/urbackup-server-2.2.11.tar.gz"
 
  RUN \
  apt-get update && \
