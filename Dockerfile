@@ -32,6 +32,6 @@ RUN apt-get autoremove -y make gcc g++ zlib1g-dev libcurl4-openssl-dev libcrypto
 
 COPY root/ /
 
-EXPOSE 55413 55414 55415 35623
+EXPOSE 55413 55414 55415 35623/udp
 
 VOLUME /var/urbackup /var/log /usr/share/urbackup
